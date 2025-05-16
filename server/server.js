@@ -10,7 +10,13 @@ app.use(cors({
     origin: ["http://localhost:3000","https://cloud-sy8o.vercel.app/"]
 }));
 
-connectWithMongoDB();
+connectWithMongoDB().then(() => {
+    console.log("Connected to MongoDB");
+}
+).catch((err) => {  
+    console.log("Error connecting to MongoDB", err);
+}
+);
 
 // For parsing application/json
 app.use(express.json());

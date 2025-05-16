@@ -9,10 +9,11 @@ const CreatePost = () => {
   const [answer, setAnswer] = useState('');
   const navigate = useNavigate();
   const { postID } = useParams();
-  const url = process.env.REACT_APP_SERVER_URL
+  const url = "https://client-server-k60n.onrender.com/api/v1"
 
   const loadPosts = async () => {
     try {
+      console.log(url)
       const response = await axios.get(`${url}/getsinglepost?postID=${postID}`);
       const post = response?.data?.responseData;
       if (post) {

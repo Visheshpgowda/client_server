@@ -7,7 +7,7 @@ import connectWithMongoDB from './db/Connection1.js'
 import cors from 'cors'
 
 app.use(cors({
-    origin: ["http://localhost:3000","https://spontaneous-kleicha-15566b.netlify.app/"]
+    origin: ["http://localhost:3000","https://cloud-sy8o.vercel.app/"]
 }));
 
 connectWithMongoDB();
